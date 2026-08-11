@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "daisy-c2db8"
+  },
+  "targets": {
+    "daisy-c2db8": {
+      "hosting": {
+        "focusspace": [
+          "focusspace-3d"
+        ]
+      }
+    }
+  }
+}
