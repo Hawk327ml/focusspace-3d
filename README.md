@@ -1,20 +1,27 @@
 # FocusSpace — 3D Study Room
 
-Interactive study room built with **React**, **Vite**, **DaisyUI**, and **React Three Fiber**.
+Interactive study room with **React Three Fiber**. Click desk objects to switch focus modes, toggle day/night, and run a Pomodoro timer.
 
-Click desk objects to switch focus tools, toggle day/night lighting, and run a Pomodoro timer.
+**Portfolio:** https://hawk327ml.github.io/  
+**Live (GitHub Pages):** https://hawk327ml.github.io/focusspace-3d/
 
-## Live
+![Study room preview](docs/preview/study-room.png)
 
-- **GitHub Pages:** https://hawk327ml.github.io/focusspace-3d/
-- Firebase Hosting (optional, when CLI auth works): https://focusspace-3d.web.app
+## What you can do
+
+- Click **laptop / book / coffee / plant / lamp / clock** to switch focus modes + tips
+- Toggle **day / night** lighting and UI theme
+- Run an on-page **Pomodoro** timer while looking at the room
+- Orbit / zoom the 3D desk scene (desktop + touch)
 
 ## Stack
 
-- React 18 + Vite
-- Tailwind CSS + DaisyUI (custom `focus` / `focusday` themes)
-- Three.js via `@react-three/fiber` + `@react-three/drei`
-- GitHub Pages (primary Live) · Firebase Hosting configs kept for optional later deploy
+| Layer | Tech |
+|-------|------|
+| UI | React 18, Tailwind, DaisyUI (`focus` / `focusday`) |
+| 3D | Three.js · `@react-three/fiber` · `@react-three/drei` |
+| Build | Vite (`base: './'`) |
+| Hosting | **GitHub Pages** (primary) |
 
 ## Local
 
@@ -30,28 +37,19 @@ npm run preview
 
 ## Deploy
 
-### GitHub Pages (recommended)
+Push to `main` → Actions (`.github/workflows/deploy-pages.yml`) publishes Pages.
 
-Push to `main`. Actions builds and publishes automatically.
+### Firebase (optional, currently unused)
 
-### Firebase Hosting (optional — anti-overwrite)
-
-Only after `firebase login` works. Deploys **only** to site `focusspace-3d` via target `focusspace`.
+`https://focusspace-3d.web.app` is **not** the active Live (site may 404 until you deploy). If you use Firebase later:
 
 ```bash
 firebase use daisy-c2db8
-firebase target:apply hosting focusspace focusspace-3d
-npm run build
 firebase deploy --only hosting:focusspace
 ```
 
-**Never** run bare `firebase deploy`.
-
-After any Firebase deploy, spot-check:
-- https://rosemary-care-notebook.web.app
-- https://focusspace-3d.web.app (if used)
-- https://luna-dining-3d.web.app (if used)
+**Never** run bare `firebase deploy`. Spot-check Rosemary / FocusSpace / Luna Live URLs after any multi-app Hosting change.
 
 ## Author
 
-Hawk327ml · Multimedia Computing
+Hawk327ml · Multimedia Computing · UPM
