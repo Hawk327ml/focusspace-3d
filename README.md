@@ -3,7 +3,7 @@
 Interactive study room with **React Three Fiber**. Click desk objects to switch focus modes, toggle day/night, and run a Pomodoro timer.
 
 **Portfolio:** https://hawk327ml.github.io/  
-**Live (GitHub Pages):** https://hawk327ml.github.io/focusspace-3d/
+**Live:** https://focusspace-3d.web.app · [GitHub Pages mirror](https://hawk327ml.github.io/focusspace-3d/)
 
 ![Study room preview](docs/preview/study-room.png)
 
@@ -21,7 +21,7 @@ Interactive study room with **React Three Fiber**. Click desk objects to switch 
 | UI | React 18, Tailwind, DaisyUI (`focus` / `focusday`) |
 | 3D | Three.js · `@react-three/fiber` · `@react-three/drei` |
 | Build | Vite (`base: './'`) |
-| Hosting | **GitHub Pages** (primary) |
+| Hosting | **Firebase** `focusspace-3d` · GitHub Pages mirror |
 
 ## Local
 
@@ -37,18 +37,21 @@ npm run preview
 
 ## Deploy
 
-Push to `main` → Actions (`.github/workflows/deploy-pages.yml`) publishes Pages.
-
-### Firebase (optional, currently unused)
-
-`https://focusspace-3d.web.app` is **not** the active Live (site may 404 until you deploy). If you use Firebase later:
+### Firebase Hosting (primary)
 
 ```bash
-firebase use daisy-c2db8
-firebase deploy --only hosting:focusspace
+npm run build
+firebase deploy --only hosting:focusspace --project daisy-c2db8
 ```
 
-**Never** run bare `firebase deploy`. Spot-check Rosemary / FocusSpace / Luna Live URLs after any multi-app Hosting change.
+**Never** run bare `firebase deploy`. After deploy, spot-check:
+- https://rosemary-care-notebook.web.app
+- https://focusspace-3d.web.app
+- https://luna-dining-3d.web.app
+
+### GitHub Pages (mirror)
+
+Push to `main` → Actions publishes https://hawk327ml.github.io/focusspace-3d/
 
 ## Author
 
