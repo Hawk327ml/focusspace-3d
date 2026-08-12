@@ -26,6 +26,12 @@ function Hero() {
         Click objects in the 3D study room to switch focus tools, lighting, and a
         built-in Pomodoro timer — one room, one workflow.
       </p>
+      <p
+        className="animate-rise mt-3 text-sm text-base-content/45"
+        style={{ animationDelay: '0.1s' }}
+      >
+        Tip: click the lamp to toggle day / night · clock opens Pomodoro
+      </p>
       <div className="animate-rise mt-7 flex flex-wrap gap-3" style={{ animationDelay: '0.14s' }}>
         <a href="#room" className="btn btn-primary">
           Explore the room

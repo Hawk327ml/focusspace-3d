@@ -18,6 +18,7 @@ function HighlightRing({ scale = 1 }) {
     if (!ringRef.current) return;
     const pulse = scale + Math.sin(clock.elapsedTime * 4) * 0.05;
     ringRef.current.scale.set(pulse, pulse, pulse);
+    ringRef.current.material.emissiveIntensity = 0.35 + Math.sin(clock.elapsedTime * 5) * 0.2;
   });
 
   return (
