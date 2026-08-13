@@ -14,30 +14,29 @@ function Hero() {
       />
 
       <p className="animate-rise text-xs font-bold uppercase tracking-[0.28em] text-primary">
-        Interactive Web · Three.js
+        3D Study Room
       </p>
       <h1 className="animate-rise mt-3 font-display text-5xl font-extrabold tracking-tight text-base-content sm:text-6xl lg:text-7xl">
         FocusSpace
       </h1>
       <p
-        className="animate-rise mt-4 max-w-xl text-lg leading-8 text-base-content/65"
+        className="animate-rise mt-4 max-w-xl text-lg leading-8 text-base-content/70"
         style={{ animationDelay: '0.08s' }}
       >
-        Click objects in the 3D study room to switch focus tools, lighting, and a
-        built-in Pomodoro timer — one room, one workflow.
+        点物件切模式 · 灯控日夜 · 时钟开番茄钟
       </p>
       <p
         className="animate-rise mt-3 text-sm text-base-content/45"
         style={{ animationDelay: '0.1s' }}
       >
-        Tip: click the lamp to toggle day / night · clock opens Pomodoro
+        Tip: 先点台灯或时钟，再拖拽旋转书房
       </p>
       <div className="animate-rise mt-7 flex flex-wrap gap-3" style={{ animationDelay: '0.14s' }}>
         <a href="#room" className="btn btn-primary">
-          Explore the room
+          进入书房
         </a>
         <a href="#modes" className="btn btn-ghost border border-base-300">
-          Study modes
+          快捷模式
         </a>
       </div>
     </section>

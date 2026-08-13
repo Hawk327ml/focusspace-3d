@@ -15,7 +15,7 @@ function Navbar({ isDarkRoom }) {
             href="#room"
             className="btn btn-ghost btn-sm hidden font-semibold sm:inline-flex"
           >
-            Enter room
+            进入书房
           </a>
           <span
             className={`badge badge-sm border-0 ${

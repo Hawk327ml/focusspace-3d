@@ -387,6 +387,8 @@ function SceneContent({ selectedId, onSelectObject, isDarkRoom }) {
         makeDefault
         target={[0, 1.3, -0.5]}
         enablePan={false}
+        autoRotate
+        autoRotateSpeed={0.55}
         minDistance={4.6}
         maxDistance={9}
         minPolarAngle={0.45}
@@ -398,8 +400,8 @@ function SceneContent({ selectedId, onSelectObject, isDarkRoom }) {
 
 function StudyRoomScene({ selectedId, onSelectObject, isDarkRoom }) {
   const selectedLabel = useMemo(() => {
-    if (!selectedId) return 'Click any object';
-    return `${selectedId.charAt(0).toUpperCase()}${selectedId.slice(1)} selected`;
+    if (!selectedId) return '点击物件开始';
+    return `${selectedId.charAt(0).toUpperCase()}${selectedId.slice(1)} 已选`;
   }, [selectedId]);
 
   return (
@@ -409,7 +411,7 @@ function StudyRoomScene({ selectedId, onSelectObject, isDarkRoom }) {
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
             3D Room
           </p>
-          <h2 className="font-display text-2xl font-bold text-base-content">Study space</h2>
+          <h2 className="font-display text-2xl font-bold text-base-content">书房场景</h2>
         </div>
         <span className="badge badge-primary badge-outline">{selectedLabel}</span>
       </div>

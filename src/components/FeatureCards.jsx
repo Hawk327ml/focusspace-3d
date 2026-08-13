@@ -17,10 +17,10 @@ function FeatureCards({ selectedId, onSelect }) {
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-primary">
             Quick select
           </p>
-          <h2 className="font-display text-3xl font-bold text-base-content">Study modes</h2>
+          <h2 className="font-display text-3xl font-bold text-base-content">快捷模式</h2>
         </div>
         <p className="max-w-md text-sm text-base-content/55">
-          Same six tools as the scene — pick here if you prefer a list over the canvas.
+          与 3D 场景同一套物件——不想点模型时，可直接从列表切换。
         </p>
       </div>
 
