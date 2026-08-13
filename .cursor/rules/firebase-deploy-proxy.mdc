@@ -1,0 +1,33 @@
+---
+description: Firebase deploy via v2rayN proxy — avoid login/attest failures
+alwaysApply: true
+---
+
+# Firebase Deploy (FocusSpace / daisy-c2db8)
+
+## Hard rules
+- Work from `Desktop\_hawk_repo_seeds\focusspace-3d` (not Codex session temp paths).
+- Only: `firebase deploy --only hosting:focusspace --project daisy-c2db8` (or `npm run deploy:hosting`).
+- Never bare `firebase deploy`.
+- Do not run `firebase logout` during troubleshooting unless the user explicitly asks.
+
+## Proxy (required on Hawk's Windows + v2rayN)
+Node / Firebase CLI **does not** use Windows system proxy. Without these, `auth.firebase.tools/attest` often fails with ECONNRESET:
+
+```powershell
+$env:HTTP_PROXY='http://127.0.0.1:10808'
+$env:HTTPS_PROXY='http://127.0.0.1:10808'
+$env:NODE_USE_ENV_PROXY='1'
+```
+
+`deploy.ps1` sets these automatically. For `firebase login`, set them in the same shell first, then prefer:
+
+```powershell
+firebase login --no-localhost
+```
+
+## After deploy
+Spot-check all three Live URLs:
+- https://focusspace-3d.web.app
+- https://rosemary-care-notebook.web.app
+- https://luna-dining-3d.web.app
